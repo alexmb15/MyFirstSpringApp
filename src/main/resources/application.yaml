@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: students
+  datasource:
+    url: jdbc:postgresql://localhost:5432/students_db
+    driver-class-name: org.postgresql.Driver    
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update #create-drop # first time create, then change to update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
