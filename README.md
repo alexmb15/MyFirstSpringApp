@@ -29,27 +29,6 @@ A simple **CRUD Spring Boot application** that shows how to combine
 | Boilerplate | **Project Lombok** |
 | Tests | JUnit 5, Spring Boot Test |
 
-
-## Quick Start
-
-```bash
-git clone https://github.com/alexmb15/MyFirstSpringApp.git
-cd MyFirstSpringApp
-
-# Start PostgreSQL (Docker example)
-docker run -d --name students-db \
-  -e POSTGRES_USER=postgres \
-  -e POSTGRES_PASSWORD=postgres \
-  -e POSTGRES_DB=students_db \
-  -p 5432:5432 postgres:16
-
-./mvnw spring-boot:run
-```
-
-Connection settings live in `src/main/resources/application.yaml`.  
-On first run the **students** table is created automatically (`ddl-auto=update`).
-
-
 ## REST Endpoints
 
 | Verb | URI | Description |
@@ -72,24 +51,6 @@ curl -X POST http://localhost:8080/api/v1/students/save_student \
 # List all
 curl http://localhost:8080/api/v1/students
 ```
-
-## Handy Maven Commands
-
-| Command | Purpose |
-|---------|---------|
-| `./mvnw spring-boot:run` | run the app |
-| `./mvnw package` | build executable **jar** in `target/` |
-| `./mvnw dependency:tree` | view dependency graph |
-
-
-
-## Planned Improvements
-* Bean validation for request DTOs  
-* Swagger / OpenAPI 3 docs  
-* DB migrations via Liquibase or Flyway  
-* Docker Compose for app + database  
-* Front-end client or OpenAPI-generated SDK
-
 
 ## License
 Released under the **MIT License**.
